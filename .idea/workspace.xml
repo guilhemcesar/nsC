@@ -10,11 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="afc028ee-218b-49fc-a38c-bb7f114dc111" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Library.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Library.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/bookArray.c" beforeDir="false" afterPath="$PROJECT_DIR$/Library/bookArray.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/bookArray.o" beforeDir="false" afterPath="$PROJECT_DIR$/Library/bookArray.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/bookArraypd.c" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Library/bookArray.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="91" column="17" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
+            <state relative-caret-position="169">
+              <caret line="87" column="23" lean-forward="true" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -85,6 +81,8 @@
       <find>res</find>
       <find>qAYX4nd8Rb</find>
       <find>DyCzvGuO1CTg1CkpWRX0</find>
+      <find>AILyGSaIaFLWs4kSC1p1</find>
+      <find>cvdkfnvsd</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -161,22 +159,21 @@
       <workItem from="1560413198238" duration="147000" />
       <workItem from="1560438921346" duration="2202000" />
       <workItem from="1560441249885" duration="30000" />
-      <workItem from="1560441579021" duration="740000" />
+      <workItem from="1560441579021" duration="1139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3119000" />
+    <option name="totallyTimeSpent" value="3518000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18636364" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18636364" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.17077176" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -207,9 +204,6 @@
     <entry file="file://$PROJECT_DIR$/Library/book.c">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Library/book.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Library/bookArray.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -234,10 +228,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Library/book.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Library/bookArray.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="91" column="17" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
+        <state relative-caret-position="169">
+          <caret line="87" column="23" lean-forward="true" selection-start-line="87" selection-start-column="23" selection-end-line="87" selection-end-column="23" />
         </state>
       </provider>
     </entry>

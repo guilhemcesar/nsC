@@ -67,7 +67,7 @@
 //#define RrQlSvRxJluemLp bookaIndexOf
 #define RrQlSvRxJluemLp bookaIndexOf
 //#define qAYX4nd8Rb DyCzvGuO1CTg1CkpWRX0
-#define DyCzvGuO1CTg1CkpWRX0 DyCzvGuO1CTg1CkpWRX0
+#define qAYX4nd8Rb DyCzvGuO1CTg1CkpWRX0
 //#define MLldsJqmq62yDYpKuP9X rIcykUXL14JgWinydNhx
 #define MLldsJqmq62yDYpKuP9X rIcykUXL14JgWinydNhx
 //#define SDBsAVbrbdlOACs8FB9 bookaRemoveAt
@@ -89,7 +89,7 @@
 //#define uVO1Qalnv5iBgS7nlmK9 gY8GGIzIQZF45mZ61QfJ
 #define uVO1Qalnv5iBgS7nlmK9 gY8GGIzIQZF45mZ61QfJ
 //#define AILyGSaIaFLWs4kSC1p1 DyCzvGuO1CTg1CkpWRX0
-#define AILyGSaIaFLWs4kSC1p1 DyCzvGuO1CTg1CkpWRX0
+#define DyCzvGuO1CTg1CkpWRX0 DyCzvGuO1CTg1CkpWRX0
 
 #include <assert.h>
 #include "bookArray.h"
