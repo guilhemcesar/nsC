@@ -5,65 +5,65 @@
 #include <stdio.h>
 
 struct BookArray {
-    IBook var1[10];
-    struct BookArray *var2;
+    IBook tableauDeIBook[10];
+    struct BookArray *pointeurDeBookArray;
 };
 
 IBookArray bookaNew() {
-    IBookArray var3 = calloc(1, sizeof(struct BookArray));
-    (*var3).var2 = NULL;
-    return var3;
+    IBookArray nouveauIbookArray = calloc(1, sizeof(struct BookArray));
+    (*nouveauIbookArray).pointeurDeBookArray = NULL;
+    return nouveauIbookArray;
 }
 
-void bookaDelete(IBookArray var4) {
-    free(var4);
+void bookaDelete(IBookArray iBookArrayALiberer) {
+    free(iBookArrayALiberer);
 }
 
-void bookaAppend(IBookArray var5, IBook var6) {
-    int whiQ5 = 0;
-    while (var5->var1[whiQ5] != NULL) { whiQ5++; }
-    var5->var1[whiQ5] = var6;
+void bookaAppend(IBookArray iBookArrayArgument, IBook nouveauIBook) {
+    int indice = 0;
+    while (iBookArrayArgument->tableauDeIBook[indice] != NULL) { indice++; }
+    iBookArrayArgument->tableauDeIBook[indice] = nouveauIBook;
 }
 
-IBook bookaGet(IBookArray var6, int var7) {
-    return var6->var1[var7];
+IBook bookaGet(IBookArray argIBookArray, int indice) {
+    return argIBookArray->tableauDeIBook[indice];
 }
 
-int bookaIndexOf(IBookArray var8, IBook var4) {
-    int rA07ovND =  - 1;
-    int UuMr6w23 =0;
-    while (var8->var1[UuMr6w23] != NULL) {
-        UuMr6w23++;
-        rA07ovND++;
-        if (var8->var1[rA07ovND] == var4) break;
+int bookaIndexOf(IBookArray iBookArrayArgument, IBook iBookArg) {
+    int indiceARetourner =  - 1;
+    int indice =0;
+    while (iBookArrayArgument->tableauDeIBook[indice] != NULL) {
+        indice++;
+        indiceARetourner++;
+        if (iBookArrayArgument->tableauDeIBook[indiceARetourner] == iBookArg) break;
     }
-    return rA07ovND;
+    return indiceARetourner;
 }
 
-void bookaInsertAt(IBookArray var9, int var10, IBook var11) {
-    if ((*var9).var1[var10] != NULL)
-        bookaInsertAt(var9, var10 + 1,
-                      var9->var1[var10]);
-    var9->var1[var10] = var11;
+void bookaInsertAt(IBookArray iBookArrayArgument, int indice, IBook newIBook) {
+    if ((*iBookArrayArgument).tableauDeIBook[indice] != NULL)
+        bookaInsertAt(iBookArrayArgument, indice + 1,
+                      iBookArrayArgument->tableauDeIBook[indice]);
+    iBookArrayArgument->tableauDeIBook[indice] = newIBook;
 }
 
-void bookaRemoveAt(IBookArray var12, int var13) {
-    if (var12->var1[var13 + 1] != NULL) {
-        var12->var1[var13] = var12->var1[var13 + 1];
-        bookaRemoveAt(var12, var13 + 1);
-    } else var12->var1[var13] = NULL;
+void bookaRemoveAt(IBookArray iBookArrayArgument, int indice) {
+    if (iBookArrayArgument->tableauDeIBook[indice + 1] != NULL) {
+        iBookArrayArgument->tableauDeIBook[indice] = iBookArrayArgument->tableauDeIBook[indice + 1];
+        bookaRemoveAt(iBookArrayArgument, indice + 1);
+    } else iBookArrayArgument->tableauDeIBook[indice] = NULL;
 }
 
 void bookaRemoveLast(IBookArray this) {
     bookaRemoveAt(this, bookaSize(this) -1);
 }
 
-void bookaSet(IBookArray var14, int var15, IBook var16) {
-    (*var14).var1[var15] = var16;
+void bookaSet(IBookArray iBookArrayArgument, int indice, IBook newIBook) {
+    (*iBookArrayArgument).tableauDeIBook[indice] = newIBook;
 }
 
-int bookaSize(IBookArray var17) {
-    int var18 = 0;
-    while ((*var17).var1[var18] != NULL) var18++;
-    return var18;
+int bookaSize(IBookArray iBookArrayArgument) {
+    int indice = 0;
+    while ((*iBookArrayArgument).tableauDeIBook[indice] != NULL) indice++;
+    return indice;
 }
