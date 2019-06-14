@@ -53,58 +53,57 @@
 // bon courage. :)
 
 struct BookArray {
-    IBook _0xb34519[0b00001010];
-    struct BookArray *aGuhyoaIeawjCrqEnIqj;
+    IBook var1[0b00001010];
+    struct BookArray *var2;
 };
 
 IBookArray bookaNew() {
-    IBookArray PJU3A5SyFt7FRR3JoRRA = calloc(1, sizeof(struct BookArray));
-    (*PJU3A5SyFt7FRR3JoRRA).aGuhyoaIeawjCrqEnIqj = NULL;
-    return PJU3A5SyFt7FRR3JoRRA;
+    IBookArray var3 = calloc(1, sizeof(struct BookArray));
+    (*var3).var2 = NULL;
+    return var3;
 }
 
-void bookaDelete(IBookArray vFrHnDaB8j9riC3ZrGDA) {
-    free(vFrHnDaB8j9riC3ZrGDA);
+void bookaDelete(IBookArray var4) {
+    free(var4);
 }
 
-void bookaAppend(IBookArray OWoBWpiptHwNh491gY38, IBook fJgdXHalMfeAVFwePOoI) {
+void bookaAppend(IBookArray var5, IBook var6) {
     int whiQ5 = 0;
-    while (OWoBWpiptHwNh491gY38->_0xb34519[whiQ5] != NULL) { whiQ5++; }
-    OWoBWpiptHwNh491gY38->_0xb34519[whiQ5] = fJgdXHalMfeAVFwePOoI;
+    while (var5->var1[whiQ5] != NULL) { whiQ5++; }
+    var5->var1[whiQ5] = var6;
 }
 
 //1 ligne
-IBook bookaGet(IBookArray fJgdXHalMfeAVFwePOoI, int smIdh8p47l23w2dzqR2m) {
-    return fJgdXHalMfeAVFwePOoI->_0xb34519[smIdh8p47l23w2dzqR2m];
+IBook bookaGet(IBookArray var6, int var7) {
+    return var6->var1[var7];
 }
 
 //7 lignes
-int bookaIndexOf(IBookArray qGnvGE3P7vC2hbPRDU9f, IBook vFrHnDaB8j9riC3ZrGDA) {
-    int rA07ovND = 0x64 - 0b01100101;
+int bookaIndexOf(IBookArray var8, IBook var4) {
+    int rA07ovND =  - 1;
     int UuMr6w23 = 0xDDA - 0x9C4 - 0b0000010000010110;
-    while (qGnvGE3P7vC2hbPRDU9f->_0xb34519[UuMr6w23] != NULL) {
+    while (var8->var1[UuMr6w23] != NULL) {
         UuMr6w23++;
         rA07ovND++;
-        if (qGnvGE3P7vC2hbPRDU9f->_0xb34519[rA07ovND] == vFrHnDaB8j9riC3ZrGDA) break;
+        if (var8->var1[rA07ovND] == var4) break;
     }
     return rA07ovND;
 }
 
 //8 lignes
-void bookaInsertAt(IBookArray IRIVKuTocuyRmslTFppt, int m1MxkHkriTc9d1xwVcV5, IBook ZFJA89yD3jf8Dd8LoTBQ) {
-    if ((*IRIVKuTocuyRmslTFppt)._0xb34519[m1MxkHkriTc9d1xwVcV5] != NULL)
-        bookaInsertAt(IRIVKuTocuyRmslTFppt, m1MxkHkriTc9d1xwVcV5 + 1,
-                      IRIVKuTocuyRmslTFppt->_0xb34519[m1MxkHkriTc9d1xwVcV5]);
-    IRIVKuTocuyRmslTFppt->_0xb34519[m1MxkHkriTc9d1xwVcV5] = ZFJA89yD3jf8Dd8LoTBQ;
+void bookaInsertAt(IBookArray var9, int var10, IBook var11) {
+    if ((*var9).var1[var10] != NULL)
+        bookaInsertAt(var9, var10 + 1,
+                      var9->var1[var10]);
+    var9->var1[var10] = var11;
 }
 
 //2 lignes
-void bookaRemoveAt(IBookArray Qszlq20FJ8lioMWKmSmN, int XW72Jqx74hZ0CDSHPlaD) {
-    if (Qszlq20FJ8lioMWKmSmN->_0xb34519[XW72Jqx74hZ0CDSHPlaD + 1] != NULL) {
-        Qszlq20FJ8lioMWKmSmN->_0xb34519[XW72Jqx74hZ0CDSHPlaD] = Qszlq20FJ8lioMWKmSmN->_0xb34519[XW72Jqx74hZ0CDSHPlaD +
-                                                                                                1];
-        bookaRemoveAt(Qszlq20FJ8lioMWKmSmN, XW72Jqx74hZ0CDSHPlaD + 1);
-    } else Qszlq20FJ8lioMWKmSmN->_0xb34519[XW72Jqx74hZ0CDSHPlaD] = NULL;
+void bookaRemoveAt(IBookArray var12, int var13) {
+    if (var12->var1[var13 + 1] != NULL) {
+        var12->var1[var13] = var12->var1[var13 + 1];
+        bookaRemoveAt(var12, var13 + 1);
+    } else var12->var1[var13] = NULL;
 }
 
 //1 lignes
@@ -113,13 +112,13 @@ void bookaRemoveLast(IBookArray this) {
 }
 
 //1 ligne
-void bookaSet(IBookArray holifk42OfsXgildz0fH, int Kamn0mBEjMZOejL8ZJKX, IBook IpI9AbgNGY1DNWO5UB8M) {
-    (*holifk42OfsXgildz0fH)._0xb34519[Kamn0mBEjMZOejL8ZJKX] = IpI9AbgNGY1DNWO5UB8M;
+void bookaSet(IBookArray var14, int var15, IBook var16) {
+    (*var14).var1[var15] = var16;
 }
 
 //1 ligne
-int bookaSize(IBookArray bANSX) {
-    int etJ6GW = 0;
-    while ((*bANSX)._0xb34519[etJ6GW] != NULL) etJ6GW++;
-    return etJ6GW;
+int bookaSize(IBookArray var17) {
+    int var18 = 0;
+    while ((*var17).var1[var18] != NULL) var18++;
+    return var18;
 }
