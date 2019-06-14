@@ -53,7 +53,7 @@
 // bon courage. :)
 
 struct BookArray {
-    IBook var1[0b00001010];
+    IBook var1[10];
     struct BookArray *var2;
 };
 
@@ -81,7 +81,7 @@ IBook bookaGet(IBookArray var6, int var7) {
 //7 lignes
 int bookaIndexOf(IBookArray var8, IBook var4) {
     int rA07ovND =  - 1;
-    int UuMr6w23 = 0xDDA - 0x9C4 - 0b0000010000010110;
+    int UuMr6w23 =0;
     while (var8->var1[UuMr6w23] != NULL) {
         UuMr6w23++;
         rA07ovND++;
@@ -108,7 +108,7 @@ void bookaRemoveAt(IBookArray var12, int var13) {
 
 //1 lignes
 void bookaRemoveLast(IBookArray this) {
-    bookaRemoveAt(this, bookaSize(this) + (0x64 - 0b01100101));
+    bookaRemoveAt(this, bookaSize(this) -1);
 }
 
 //1 ligne
