@@ -21,21 +21,21 @@ void bookaDelete(IBookArray iBookArrayALiberer) {
 
 void bookaAppend(IBookArray iBookArrayArgument, IBook nouveauIBook) {
     int indice = 0;
-    while (iBookArrayArgument->tableauDeIBook[indice] != NULL) { indice++; }
-    iBookArrayArgument->tableauDeIBook[indice] = nouveauIBook;
+    while ((*iBookArrayArgument).tableauDeIBook[indice] != NULL) { indice++; }
+    (*iBookArrayArgument).tableauDeIBook[indice] = nouveauIBook;
 }
 
 IBook bookaGet(IBookArray argIBookArray, int indice) {
-    return argIBookArray->tableauDeIBook[indice];
+    return (*argIBookArray).tableauDeIBook[indice];
 }
 
 int bookaIndexOf(IBookArray iBookArrayArgument, IBook iBookArg) {
     int indiceARetourner =  - 1;
     int indice =0;
-    while (iBookArrayArgument->tableauDeIBook[indice] != NULL) {
+    while ((*iBookArrayArgument).tableauDeIBook[indice] != NULL) {
         indice++;
         indiceARetourner++;
-        if (iBookArrayArgument->tableauDeIBook[indiceARetourner] == iBookArg) break;
+        if ((*iBookArrayArgument).tableauDeIBook[indiceARetourner] == iBookArg) break;
     }
     return indiceARetourner;
 }
@@ -43,15 +43,15 @@ int bookaIndexOf(IBookArray iBookArrayArgument, IBook iBookArg) {
 void bookaInsertAt(IBookArray iBookArrayArgument, int indice, IBook newIBook) {
     if ((*iBookArrayArgument).tableauDeIBook[indice] != NULL)
         bookaInsertAt(iBookArrayArgument, indice + 1,
-                      iBookArrayArgument->tableauDeIBook[indice]);
-    iBookArrayArgument->tableauDeIBook[indice] = newIBook;
+                      (*iBookArrayArgument).tableauDeIBook[indice]);
+    (*iBookArrayArgument).tableauDeIBook[indice] = newIBook;
 }
 
 void bookaRemoveAt(IBookArray iBookArrayArgument, int indice) {
-    if (iBookArrayArgument->tableauDeIBook[indice + 1] != NULL) {
-        iBookArrayArgument->tableauDeIBook[indice] = iBookArrayArgument->tableauDeIBook[indice + 1];
+    if ((*iBookArrayArgument).tableauDeIBook[indice + 1] != NULL) {
+        (*iBookArrayArgument).tableauDeIBook[indice] = iBookArrayArgument->tableauDeIBook[indice + 1];
         bookaRemoveAt(iBookArrayArgument, indice + 1);
-    } else iBookArrayArgument->tableauDeIBook[indice] = NULL;
+    } else (*iBookArrayArgument).tableauDeIBook[indice] = NULL;
 }
 
 void bookaRemoveLast(IBookArray this) {
